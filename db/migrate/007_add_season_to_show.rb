@@ -3,6 +3,6 @@ class AddSeasonToShow < ActiveRecord::Migration[4.2]
   #a new migration, and then in the change method,
   #we make the change.
   def change
-    add_column :show, :season, :string
+    add_column :shows, :season, :string
   end
 end
