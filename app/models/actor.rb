@@ -7,7 +7,9 @@ class Actor < ActiveRecord::Base
   end
 
   def list_roles
-    self.characters[0]
+    self.characters.map do |character_obj|
+      character_obj.name + " - " + character_obj.show.name
+    end
   end
 
 end
